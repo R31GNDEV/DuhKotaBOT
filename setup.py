@@ -44,7 +44,7 @@ async def setup():
     # not required
     guild.channel_applenews      = 1025301839954063401  # put in the channel IDs for your server here
     # channel for public mod logs
-    guild.channel_public         = 1025290702306947152 # put in the channel IDs for your server here
+    guild.channel_public         = 1025517297244315678 # put in the channel IDs for your server here
     # optional, used for /subnrews command or something
     guild.channel_common_issues  = 1006692824118472829  # put in the channel IDs for your server here
     # #general, required for permissions
