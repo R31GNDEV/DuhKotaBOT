@@ -1,7 +1,7 @@
-# GIR Rewrite
-![GIR banner](data/images/banner.png)
+# GIR Rewrite -> DuhKota
+![DuhKota banner](data/images/banner.gif)
 
-GIR is a sophisticated moderation and miscellaneous utilities Discord bot created for the [r/Jailbreak Discord server](https://reddit.com/r/jailbreak). It features:
+DuhKota is a sophisticated moderation and miscellaneous utilities Discord bot created for Dakota's Safe Space. It features:
 
 - Completely based on Discord's Slash Commands, written in the [Discord.py library](https://github.com/Rapptz/discord.py)
 - Standard moderation commands such as warn, mute, kick, ban, ...
@@ -12,7 +12,7 @@ GIR is a sophisticated moderation and miscellaneous utilities Discord bot create
 - Miscellaneous utilities like `/canijailbreak`
 - And much more!
 
-GIR is custom made for the r/Jailbreak server and therefore there is no publicly running bot you can invite to your own server. However, you can self-host it as is or fork the code and modify it to your own requirements!
+DuhKota is custom made for Dakota's Safe Space server and therefore there is no publicly running bot you can invite to your own server. However, you can self-host it as is or fork the code and modify it to your own requirements!
 
 > See also: [Bloo](https://github.com/DiscordGIR/Bloo) and [GIR](https://github.com/DiscordGIR/GIR)
 
@@ -30,7 +30,8 @@ These instructions *should* work on macOS, Windows and Linux.
     - If running Mongo in Docker, set `DB_HOST` to `mongo`
 
 > **NOT RECOMMENDED FOR PRODUCTION DUE TO POOR PERFORMANCE**
-Optionally, you can use [MongoDB Atlas](https://www.mongodb.com/atlas/database) instead of a local Mongo server, or you can ask SlimShadyIAm on Discord for access to the shared test database. In that case, you use:
+Optionally, you can use [MongoDB Atlas](https://www.mongodb.com/atlas/database) instead of a local Mongo server.
+In that case, you use:
 `DB_CONNECTION_STRING=mongodb+srv://.....` instead of `DB_HOST` and `DB_PORT`.
 
 ## Setting up the bot
@@ -39,7 +40,7 @@ Optionally, you can use [MongoDB Atlas](https://www.mongodb.com/atlas/database) 
 This setup uses Docker for deployment. You will need the following:
 - Docker
 - `docker-compose`
-- Mongo installation (optional, but recommended because it makes the setup easier. Advanced uses can also run Mongo in Docker, follow the instructions in `docker-compose.yml`).
+- Mongo installation (optional, but recommended because it makes the setup easier. Advanced uses can also run Mongo in Docker, follow the instructions in `docker-compose.yml`)
 
 > Alternatively, you could set up the bot without Docker using PM2 but I won't provide instructions for that.
 
@@ -119,6 +120,7 @@ If you want to inspect or change database values:
     <td align="center"><a href="https://github.com/Ultra03"><img src="https://avatars.githubusercontent.com/u/20672260?v=4" width="100px;" alt=""/><br /><sub><b>Ultra03</b></sub></a></td>
     <td align="center"><a href="https://github.com/ja1dan"><img src="https://avatars.githubusercontent.com/u/37126748?v=4" width="100px;" alt=""/><br /><sub><b>ja1dan</b></sub></a></td>
     <td align="center"><a href="https://github.com/donato-fiore"><img src="https://avatars.githubusercontent.com/u/50346119?v=4" width="100px;" alt=""/><br /><sub><b>donato-fiore</b></sub></a></td>
+    <td align="center"><a href="https://github.com/r31gndev"><img src="https://avatars.githubusercontent.com/u/47910591?v=4" width="100px;" alt=""/><br /><sub><b>Dakota Lee</b></sub></a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://m1sta.xyz/"><img src="https://avatars.githubusercontent.com/u/37033149?v=4" width="100px;" alt=""/><br /><sub><b>m1stadev</b></sub></a></td>
