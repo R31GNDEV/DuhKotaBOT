@@ -28,25 +28,21 @@ platforms = {
 class Songs(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        
         # self.spotify_pattern = re.compile(r"[\bhttps://open.\b]spotify[\b.com\b]*[/:]*track[/:]*[A-Za-z0-9]+")
         # self.am_pattern = re.compile(r"[\bhttps://music.\b]apple[\b.com\b]*[/:][[a-zA-Z][a-zA-Z]]?[:/]album[/:][a-zA-Z\d%\(\)-]+[/:][\d]{1,10}")
         self.pattern = re.compile(r"https:\/\/(open.spotify.com\/track\/[A-Za-z0-9]+|music.apple.com\/[a-zA-Z][a-zA-Z]?\/album\/[a-zA-Z\d%\(\)-]+/[\d]{1,10}\?i=[\d]{1,15})")
         self.song_phrases = [
             "I Like listening to {artist} too!\n Here's \"{title}\"...",
+            "Kota likes listening to {artist} too!\n Here's \"{title}\"...",
             "You listen to {artist} too? They're my favorite!\nHere's \"{title}\"..."
         ]
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
-        if cfg.aaron_id is None or cfg.aaron_role is None:
-            return
-        if not message.guild:
-            return
         if message.guild.id != cfg.guild_id:
             return
         if message.author.bot:
-            return
-        if message.channel.id != guild_service.get_guild().channel_general:
             return
 
         match = self.pattern.search(message.content.strip("<>"))

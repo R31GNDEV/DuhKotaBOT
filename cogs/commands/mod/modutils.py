@@ -260,8 +260,8 @@ class ModUtils(commands.Cog):
 
     @mod_and_up()
     @app_commands.guilds(cfg.guild_id)
-    @app_commands.command(description="Sayyyy")
-    @app_commands.describe(message="The message to say")
+    @app_commands.command(description="Make DuhKota Say Something...")
+    @app_commands.describe(message="The message you will force her to say unconsensually...")
     @app_commands.describe(image="Image to attach")
     @app_commands.describe(channel="The channel to say it in")
     @transform_context
@@ -277,12 +277,12 @@ class ModUtils(commands.Cog):
             await channel.send(message, file=await image.to_file())
         else:
             await channel.send(message)
-        await ctx.send_success("Done!")
+        await ctx.send_success("Thanks for the ass slap! That felt good :3")
 
         logging_channel = ctx.guild.get_channel(
             guild_service.get_guild().channel_private)
 
-        embed = discord.Embed(color=discord.Color.gold(), title="Someone abused me :(",
+        embed = discord.Embed(color=discord.Color.gold(), title="I was slapped...",
                               description=f"In {ctx.channel.mention} {ctx.author.mention} said:\n\n{message}")
         await logging_channel.send(embed=embed)
 

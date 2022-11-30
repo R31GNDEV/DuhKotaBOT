@@ -293,12 +293,12 @@ class ModActions(commands.Cog):
     @app_commands.command(description="Purge channel messages")
     @app_commands.describe(amount="Number of messages to purge")
     @transform_context
-    async def purge(self, ctx: GIRContext, amount: app_commands.Range[int, 1, 100]) -> None:
+    async def purge(self, ctx: GIRContext, amount: app_commands.Range[int, 1, 1000]) -> None:
         if amount <= 0:
             raise commands.BadArgument(
                 "Number of messages to purge must be greater than 0")
-        elif amount >= 100:
-            amount = 100
+        elif amount >= 1000:
+            amount = 1000
 
         msgs = [message async for message in ctx.channel.history(limit=amount)]
         await ctx.channel.purge(limit=amount)

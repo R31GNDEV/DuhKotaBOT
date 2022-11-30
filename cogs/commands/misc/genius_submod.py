@@ -143,7 +143,8 @@ class Genius(commands.Cog):
             await ctx.send_warning("Cancelled new embed.", followup=True)
             return
 
-        embed, f, _ = await prepare_issue_response(title, description, ctx.author, image=image)
+        embed, f, _ = await prepare_issue_response(title, description, ctx.author, image=image, color=discord.Color.blurple())
+        
         await post_channel.send(embed=embed, file=f)
 
         await ctx.send_success(f"Embed posted in {post_channel.mention}!", delete_after=5, ephemeral=True)
